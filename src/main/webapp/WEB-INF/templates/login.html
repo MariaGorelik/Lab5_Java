@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Authentification</h1>
+  </header>
+  <form method="post">
+    <label for="user">User:</label>
+    <input type="text" id="user" name="user" required>
+    <br><br>
+    <label for="role">Role:</label>
+    <br>
+    <div class="role-selection">
+      <label class="radio-btn">
+        Admin
+        <input type="radio" name="role" value="administrator" required>
+      </label>
+      <label class="radio-btn">
+        Client
+        <input type="radio" name="role" value="client" required>
+      </label>
+    </div>
+    <br>
+    <input type="submit" value="Login" class="btn">
+  </form>
+</div>
+</body>
+</html>

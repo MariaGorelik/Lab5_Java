@@ -1,0 +1,79 @@
+/* Основные настройки для страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f4f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Контейнер для контента */
+.container {
+    text-align: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Стили для заголовка и ссылок */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Стили для текста и списка */
+p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Увеличенный шрифт для списка опций */
+.option-list {
+    padding-left: 0;
+    list-style: none;
+    font-size: 20px; /* Увеличенный размер шрифта */
+}
+
+.option-list li {
+    margin-bottom: 15px;
+}
+
+/* Стили для кнопки */
+form {
+    margin-top: 20px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для ссылки Demo */
+.demo-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}

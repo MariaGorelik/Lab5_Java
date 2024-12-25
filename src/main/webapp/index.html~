@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Welcome to Book Library</h1>
+    <nav>
+      <p><li><a href="books" th:href="@{/books}">Book catalog</a></li></p>
+      <p><li><a href="readers" th:href="@{/readers}">Readers list</a></li></p>
+      <p><li><a href="issues" th:href="@{/issues}">Issues list</a></li></p>
+    </nav>
+  </div>
+</header>
+</body>
+</html>

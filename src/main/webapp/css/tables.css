@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid #ccc;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавлена тень для стиля */
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc; /* Обновлен цвет границы */
+}
+
+th {
+    background: #007bff; /* Синий цвет заголовка */
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+tr:nth-child(odd) {
+    background: #e3f2fd; /* Светло-синий для нечётных строк */
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9; /* Светло-серый для чётных строк */
+}
+
+tr:hover {
+    background: #d1e9ff; /* Добавлен цвет при наведении */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #007bff; /* Синий для заголовков */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
+}
