@@ -1,12 +1,9 @@
 package filter;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.Writer;
-import java.nio.charset.StandardCharsets;
 import java.util.Calendar;
 
-import org.apache.commons.io.IOUtils;
 import org.thymeleaf.ITemplateEngine;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.messageresolver.IMessageResolver;
@@ -20,11 +17,6 @@ import org.thymeleaf.web.servlet.JakartaServletWebApplication;
 
 
 import contr.*;
-import dao.LibraryDAO;
-import dao.DAOException;
-import entity.Book;
-import entity.Reader;
-import entity.Issue;
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.FilterConfig;
@@ -32,7 +24,6 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.annotation.WebFilter;
-import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
@@ -46,9 +37,6 @@ public class MainFilter  implements Filter{
 
     @Override
     public void init(FilterConfig filterConfig){
-
-        System.out.println("init main filter");
-
         this.application =
                 JakartaServletWebApplication.buildApplication(filterConfig.getServletContext());
 
@@ -60,10 +48,6 @@ public class MainFilter  implements Filter{
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
-        System.out.println("doFilter");
-
-        System.out.println("Filtering request: " + ((HttpServletRequest) request).getRequestURI());
-
         if (!process((HttpServletRequest)request, (HttpServletResponse)response)) {
             chain.doFilter(request, response);
         }
@@ -72,20 +56,12 @@ public class MainFilter  implements Filter{
 
     private ITemplateEngine buildTemplateEngine(final IWebApplication application) {
         final WebApplicationTemplateResolver templateResolver = new WebApplicationTemplateResolver(application);
-        //	 StringTemplateResolver templateResolver = new StringTemplateResolver();
-        // HTML is the default mode, but we will set it anyway for better understanding of code
         templateResolver.setTemplateMode(TemplateMode.HTML);
-        // This will convert "home" to "/WEB-INF/templates/home.html"
         templateResolver.setPrefix("/WEB-INF/templates/");
         templateResolver.setSuffix(".html");
-        // Set template cache TTL to 1 hour. If not set, entries would live in cache until expelled by LRU
         templateResolver.setCacheTTLMs(Long.valueOf(3600000L));
-
-        // Cache is set to true by default. Set to false if you want templates to
-        // be automatically updated when modified.
         templateResolver.setCacheable(true);
         IMessageResolver stringTemplateResolver = new StandardMessageResolver();
-
         final TemplateEngine templateEngine = new TemplateEngine();
         templateEngine.setTemplateResolver(templateResolver);
         templateEngine.setMessageResolver(stringTemplateResolver);

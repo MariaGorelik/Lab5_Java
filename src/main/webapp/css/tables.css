@@ -13,36 +13,36 @@ table {
     background: #fff;
     border: 1px solid #ccc;
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавлена тень для стиля */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 th, td {
     padding: 12px;
-    border: 1px solid #ccc; /* Обновлен цвет границы */
+    border: 1px solid #ccc;
 }
 
 th {
-    background: #007bff; /* Синий цвет заголовка */
+    background: #007bff;
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
 }
 
 tr:nth-child(odd) {
-    background: #e3f2fd; /* Светло-синий для нечётных строк */
+    background: #e3f2fd;
 }
 
 tr:nth-child(even) {
-    background: #f9f9f9; /* Светло-серый для чётных строк */
+    background: #f9f9f9;
 }
 
 tr:hover {
-    background: #d1e9ff; /* Добавлен цвет при наведении */
+    background: #d1e9ff;
 }
 
 h1, h2 {
     text-align: center;
-    color: #007bff; /* Синий для заголовков */
+    color: #007bff;
 }
 
 a {
